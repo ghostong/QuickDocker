@@ -1,0 +1,15 @@
+version: '3.7'
+services:
+  redis:
+    restart: always
+    container_name: Redis5
+    image:
+      redis:5.0
+    volumes:
+      - ./redis.conf:/etc/redis/redis.conf
+      - /Volumes/QuickDocker/Redis5/data:/data
+      - /Volumes/QuickDocker/Redis5/logs:/logs
+    ports:
+      - "6379:6379"
+    environment:
+      TZ: "Asia/Shanghai"
