@@ -2,7 +2,7 @@ version: '3.7'
 services:
   redis:
     restart: always
-    container_name: Redis5
+    container_name: Redis
     image:
       redis:5.0
     volumes:

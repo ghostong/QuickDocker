@@ -1,0 +1,12 @@
+version: '3.7'
+services:
+  memcache:
+    restart: always
+    container_name: Memcached
+    image:
+      memcached:1.6
+    command: memcached -m 64
+    ports:
+      - "11211:11211"
+    environment:
+      TZ: "Asia/Shanghai"
