@@ -1,0 +1,7 @@
+version: '3.7'
+services:
+  php-nginx:
+    image:
+      registry.cn-hangzhou.aliyuncs.com/litosrc/np:7.2
+    build:
+      ./
