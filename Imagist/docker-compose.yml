@@ -3,7 +3,7 @@ services:
   imagist:
     container_name: imagist
     image:
-      registry.cn-hangzhou.aliyuncs.com/litosrc/imagist.latest
+      registry.cn-hangzhou.aliyuncs.com/litosrc/imagist:latest
     build:
       ./
     volumes:
