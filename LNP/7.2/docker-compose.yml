@@ -1,6 +1,7 @@
 version: '3.7'
 services:
-  php-nginx:
+  lnp:
+    container_name: lnp72
     image:
       registry.cn-hangzhou.aliyuncs.com/litosrc/lnp:7.2
     build:
