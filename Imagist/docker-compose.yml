@@ -5,8 +5,9 @@ services:
     image:
       registry.cn-hangzhou.aliyuncs.com/litosrc/imagist:latest
     build:
-      ./
+      context: ./
+      dockerfile: Dockerfile
     volumes:
       - ./p:/workdir/imagist/public/p
     ports:
-      - 8090:80
+      - "8090:80"

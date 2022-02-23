@@ -1,0 +1,18 @@
+version: '3.7'
+services:
+  sshfp:
+    image:
+      sshfp:latest
+    ports:
+      - "51234:50000"
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    volumes:
+      - ~/a.rsa:/tmp/sshfp.rsa
+    environment:
+      RSA_FILEPATH: /tmp/sshfp.rsa  #SSH SRA 文件路径
+      PROXY_ADDRESS: 192.168.1.101:51234  #代理服务器地址
+      TARGET_ADDRESS: 192.168.1.102:50000  #目标服务地址
+      LOGIN_DEPICT: readonly@192.168.1.103  #目标服务器地址
+
