@@ -3,13 +3,14 @@ services:
   sshfp:
     image:
       sshfp:latest
+    restart: always
     ports:
       - "51234:50000"
     build:
       context: ./
       dockerfile: Dockerfile
     volumes:
-      - ~/a.rsa:/tmp/sshfp.rsa
+      - ./sshfp.rsa:/tmp/sshfp.rsa
     environment:
       RSA_FILEPATH: /tmp/sshfp.rsa  #SSH SRA 文件路径
       PROXY_ADDRESS: 192.168.1.101:51234  #代理服务器地址

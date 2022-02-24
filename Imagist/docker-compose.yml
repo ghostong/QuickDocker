@@ -2,6 +2,7 @@ version: '3.7'
 services:
   imagist:
     container_name: imagist
+    restart: always
     image:
       registry.cn-hangzhou.aliyuncs.com/litosrc/imagist:latest
     build:
