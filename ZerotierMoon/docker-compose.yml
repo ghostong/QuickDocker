@@ -1,0 +1,14 @@
+version: "3"
+services:
+  zerotier-moon:
+    image: seedgou/zerotier-moon:v1.8.3
+    container_name: "zerotier-moon"
+    restart: always
+    ports:
+      - "9993:9993/udp"
+    volumes:
+      - ./config:/var/lib/zerotier-one
+    entrypoint:
+      - /startup.sh
+      - "-4"
+      - 0.0.0.0
